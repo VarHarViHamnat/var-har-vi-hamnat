@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Destination – Var Har Vi Hamnat UF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="destinations-page">
+
+    <!-- TOPPMENY -->
+    <header class="subpage-header">
+        <div>
+            <a href="platser.html" class="back-btn">← Alla destinationer</a>
+        </div>
+        <div class="header-title" id="headerTitle">Laddar...</div>
+        <div class="header-logo">
+            <img src="hej.png" alt="Logga">
+        </div>
+    </header>
+
+    <main class="main-content" id="platsContainer">
+        <!-- Innehåll läses in från platser-data.js -->
+    </main>
+
+    <script src="platser-data.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const platsId = urlParams.get('id');
+
+        const container = document.getElementById('platsContainer');
+        const plats = platserData[platsId];
+
+        if (plats) {
+            document.getElementById('pageTitle').innerText = `${plats.namn} – Var Har Vi Hamnat UF`;
+            document.getElementById('headerTitle').innerText = plats.namn;
+
+            let faktaHTML = plats.fakta.map(f => `
+                <div style="margin-bottom: 10px;">
+                    <strong>${f.titel}:</strong> <span>${f.värde}</span>
+                </div>
+            `).join('');
+
+            let attraktionerHTML = plats.attraktioner.map(a => `
+                <li style="margin-bottom: 8px;">${a}</li>
+            `).join('');
+
+            container.innerHTML = `
+                <div class="bento-card bento-top" style="padding: 0; overflow: hidden;">
+                    <img src="${plats.bild}" alt="${plats.namn}" style="width: 100%; height: 350px; object-fit: cover;">
+                    <div style="padding: 25px;">
+                        <span style="font-size: 0.9rem; font-weight: bold; color: #e5a93c; text-transform: uppercase;">${plats.land}</span>
+                        <h1 style="font-size: 2.2rem; margin-top: 5px;">${plats.namn}</h1>
+                    </div>
+                </div>
+
+                <div class="bento-columns">
+                    <div class="bento-col">
+                        <div class="bento-card">
+                            <h2>Snabbfakta</h2>
+                            <hr class="divider" style="margin: 15px 0;">
+                            ${faktaHTML}
+                        </div>
+                        <div class="bento-card">
+                            <h2>Historia & Bakgrund</h2>
+                            <hr class="divider" style="margin: 15px 0;">
+                            <p>${plats.historia}</p>
+                        </div>
+                    </div>
+                    <div class="bento-col">
+                        <div class="bento-card">
+                            <h2>Turistattraktioner i närheten</h2>
+                            <hr class="divider" style="margin: 15px 0;">
+                            <ul style="padding-left: 20px; color: #555;">
+                                ${attraktionerHTML}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+        } else {
+            document.getElementById('headerTitle').innerText = "Platsen hittades inte";
+            container.innerHTML = `
+                <div class="bento-card bento-top" style="text-align: center; padding: 40px;">
+                    <h1>Platsen finns inte</h1>
+                    <p style="margin-top: 10px;">Vi kunde inte hitta någon plats med detta ID.</p>
+                    <a href="platser.html" class="back-btn" style="margin-top: 20px;">Gå till alla destinationer</a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

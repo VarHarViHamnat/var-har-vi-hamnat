@@ -1,0 +1,462 @@
+/* ==========================================
+   1. GLOBAL BAS & RESET (Apple-Look)
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1d1d1f;
+    background-color: #f5f5f7;
+    line-height: 1.6;
+}
+
+.main-content, 
+.page-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* ==========================================
+   2. STARTSIDA: COVER & TOPPMENY
+   ========================================== */
+.header-cover {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hej.png');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.cover-text h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.navbar {
+    background-color: #222;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 12px 0;
+}
+
+.menu-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.menu-card {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #ffffff;
+    white-space: nowrap;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* Färgknappar på startsidan */
+.btn-home { background-color: #2c2c2e; }
+.btn-home:hover { background-color: #3a3a3c; box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); }
+
+.btn-about { background-color: #5856d6; }
+.btn-about:hover { background-color: #6e6be8; box-shadow: 0 0 22px rgba(88, 86, 214, 0.65); }
+
+.btn-shop { background-color: #007aff; }
+.btn-shop:hover { background-color: #2b8fff; box-shadow: 0 0 22px rgba(0, 122, 255, 0.65); }
+
+.btn-destinations { background-color: #007aff; }
+.btn-destinations:hover { 
+    background-color: #2b8fff; 
+    box-shadow: 0 0 22px rgba(0, 122, 255, 0.65); 
+}
+.btn-rules { background-color: #ff9500; }
+.btn-rules:hover { background-color: #ffa726; box-shadow: 0 0 22px rgba(255, 149, 0, 0.65); }
+
+.btn-climate { background-color: #34c759; }
+.btn-climate:hover { background-color: #4cd964; box-shadow: 0 0 22px rgba(52, 199, 89, 0.75); }
+
+/* ==========================================
+   3. SOCIALA MEDIER SEKTION
+   ========================================== */
+.social-section {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.social-btn {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn:hover { transform: translateY(-3px); }
+.social-btn.instagram { background-color: #E1306C; }
+.social-btn.instagram:hover { box-shadow: 0 0 18px rgba(225, 48, 108, 0.6); }
+.social-btn.facebook { background-color: #1877F2; }
+.social-btn.facebook:hover { box-shadow: 0 0 18px rgba(24, 119, 242, 0.6); }
+.social-btn.linkedin { background-color: #0A66C2; }
+.social-btn.linkedin:hover { box-shadow: 0 0 18px rgba(10, 102, 194, 0.6); }
+.social-btn.tiktok { background-color: #000000; }
+.social-btn.tiktok:hover { box-shadow: 0 0 18px rgba(37, 244, 238, 0.5); }
+
+/* ==========================================
+   4. UNDERSIDOR: HEADER & BAS-KNAPPAR
+   ========================================== */
+.subpage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.subpage-header > div,
+.subpage-header > a { flex: 1; }
+
+.header-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.header-logo { display: flex; justify-content: flex-end; }
+.header-logo img { 
+    height: 200px !important; 
+    max-height: 200px !important; 
+    width: auto !important; 
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #ffffff !important;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    display: inline-block;
+    max-width: fit-content;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* ==========================================
+   5. BENTO GRID STRUKTUR (Två Kolumner)
+   ========================================== */
+.bento-top { margin-bottom: 20px; }
+
+.bento-columns {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.bento-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bento-card, .info-card, .product-card, .product-detail-card, .welcome-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.bento-card h1, .bento-card h2 { margin-bottom: 12px; }
+.bento-card p { color: #424245; margin-bottom: 10px; }
+.bento-card img {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+}
+/* ==========================================
+   6. FÄRGTEMAN PER SIDA (BODY-KLASSER)
+   ========================================== */
+
+/* --- A. OM FÖRETAGET (Lila: #5856d6) --- */
+body.about-page .back-btn,
+body:not([class]) .back-btn { background-color: #5856d6 !important; }
+body.about-page .back-btn:hover,
+body:not([class]) .back-btn:hover {
+    background-color: #6e6be8 !important;
+    box-shadow: 0 0 22px rgba(88, 86, 214, 0.7);
+    transform: translateY(-3px);
+}
+body.about-page .bento-card:hover,
+body:not([class]) .bento-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 0 25px rgba(88, 86, 214, 0.4), 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* --- B. KLIMAT & FN-MÅL (Grön: #34c759) --- */
+body.climate-page .back-btn { background-color: #34c759 !important; }
+body.climate-page .back-btn:hover {
+    background-color: #4cd964 !important;
+    box-shadow: 0 0 22px rgba(52, 199, 89, 0.7);
+    transform: translateY(-3px);
+}
+body.climate-page .bento-card:hover,
+body.climate-page .climate-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 0 25px rgba(52, 199, 89, 0.4), 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* --- C. SPELREGLER (Orange: #ff9500) --- */
+body.rules-page .back-btn { background-color: #ff9500 !important; }
+body.rules-page .back-btn:hover {
+    background-color: #ffa726 !important;
+    box-shadow: 0 0 22px rgba(255, 149, 0, 0.7);
+    transform: translateY(-3px);
+}
+body.rules-page .bento-card:hover,
+body.rules-page .info-card:hover,
+body.rules-page .card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 0 25px rgba(255, 149, 0, 0.45), 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* --- D. BUTIK & PRODUKT (Blå: #007aff) --- */
+body.shop-page .back-btn,
+body.product-page .back-btn { background-color: #007aff !important; }
+body.shop-page .back-btn:hover,
+body.product-page .back-btn:hover {
+    background-color: #2b8fff !important;
+    box-shadow: 0 0 22px rgba(0, 122, 255, 0.7);
+    transform: translateY(-3px);
+}
+body.shop-page .bento-card:hover,
+body.shop-page .product-card:hover,
+body.product-page .bento-card:hover,
+body.product-page .product-card:hover,
+body.product-page .product-detail-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 0 25px rgba(0, 122, 255, 0.45), 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ==========================================
+   7. PRODUKTSIDOR & KÖP-KNAPPAR
+   ========================================== */
+.product-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.buy-btn, .checkout-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #34c759;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buy-btn:hover, .checkout-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(52, 199, 89, 0.6);
+}
+
+/* ==========================================
+   8. RESPONSIVITET (MOBILES)
+   ========================================== */
+@media (max-width: 768px) {
+    .bento-columns { flex-direction: column; }
+    .subpage-header { flex-direction: column; gap: 15px; text-align: center; }
+    .header-logo { justify-content: center; }
+    .product-card, .product-detail-card { flex-direction: column; text-align: center; }
+}
+
+/* ==========================================
+   KLIMATSIDANS BENTO-GRID & HERO-KORT
+   ========================================== */
+
+.klimat-hero-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.bento-grid .bento-card:hover,
+.bento-grid .climate-card:hover,
+.klimat-hero-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 0 25px rgba(52, 199, 89, 0.45), 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.climate-card, 
+.klimat-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.climate-card:hover, 
+.klimat-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 0 25px rgba(52, 199, 89, 0.45), 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ==========================================
+   DESTINATIONER: GULD-TEMA (#e5a93c)
+   ========================================== */
+
+.btn-destinations { 
+    background-color: #e5a93c !important; 
+}
+.btn-destinations:hover { 
+    background-color: #f2b84b !important; 
+    box-shadow: 0 0 22px rgba(229, 169, 60, 0.7), 0 8px 18px rgba(229, 169, 60, 0.35) !important; 
+}
+
+body.destinations-page .back-btn { 
+    background-color: #e5a93c !important; 
+    box-shadow: 0 4px 10px rgba(229, 169, 60, 0.25) !important; 
+}
+body.destinations-page .back-btn:hover { 
+    background-color: #f2b84b !important; 
+    box-shadow: 0 0 22px rgba(229, 169, 60, 0.7) !important; 
+    transform: translateY(-3px); 
+}
+
+body.destinations-page .bento-card:hover { 
+    transform: translateY(-5px) scale(1.01) !important; 
+    box-shadow: 0 0 25px rgba(229, 169, 60, 0.45), 0 10px 20px rgba(0, 0, 0, 0.08) !important; 
+    border-color: rgba(229, 169, 60, 0.4) !important; 
+}
+.page-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Sticky Sidomeny */
+.sidebar-navigation {
+    position: sticky;
+    top: 20px;
+    width: 220px;
+    height: fit-content;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.filter-title {
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #6c757d;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* A-Ö Knappnät */
+.alphabet-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+}
+
+.letter-btn, .continent-btn, .reset-button {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.continent-btn {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 4px;
+}
+
+.reset-button {
+    width: 100%;
+    background-color: #e9ecef;
+    font-weight: bold;
+}
+
+/* Aktiv knapp-stil (mörkare när vald) */
+.letter-btn.active, .continent-btn.active {
+    background-color: #212529;
+    color: #ffffff;
+    border-color: #212529;
+}
+
+.letter-btn:hover, .continent-btn:hover {
+    background-color: #e2e6ea;
+}
+
+/* Höger yta för korten */
+.cards-container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}

@@ -222,26 +222,6 @@ const platserData = {
         ],
         transport: "Flyg till Vágar flygplats + hyrbil eller bygdebuss (Bygdeleiðir) linje 201 till Gjógv."
     },
-    "harry-potter-studios": {
-        namn: "Harry Potter Museet",
-        land: "Storbritannien, Leavesden",
-        varldsdel: "Europa",
-        bild: "harry-potter.png",
-        kortBeskrivning: "Den officiella Warner Bros. studion där alla åtta Harry Potter-filmer spelades in.",
-        fakta: [
-            { titel: "Invigt", värde: "2012" },
-            { titel: "Typ", värde: "Filmstudio & Utställning" },
-            { titel: "Tema", värde: "Harry Potter filmkulisser" },
-            { titel: "Budget", värde: "800–3 800 SEK / dag" }
-        ],
-        historia: "Studion i Leavesden användes under mer än tio år som den primära inspelningsplatsen för alla åtta Harry Potter-filmer. Efter avslutad inspelning bevarades rekvisitan, kostymerna och kulisserna i utställningsform.",
-        attraktioner: [
-            { titel: "Stora salen", beskrivning: "Den ikoniska matsalen från Hogwarts med elevhemssköldar och bord." },
-            { titel: "Diagongänden", beskrivning: "Den magiska shoppinggatan med Ollivanders, Den Läckande Kitteln och Viskas Butik." },
-            { titel: "Perrong 9 ¾", beskrivning: "Originalångtåget Hogwarts Express och möjligheten att gå genom väggen." }
-        ],
-        transport: "Tåg från London Euston till Watford Junction + direkt skyttelbuss till studioserien."
-    },
     "icehotel": {
         namn: "Icehotel (Jukkasjärvi)",
         land: "Sverige, Jukkasjärvi",
@@ -521,26 +501,6 @@ const platserData = {
             { titel: "Kajrestauranger & Malmö Saluhall", beskrivning: "Mångsidiga matställen och delikatessbutiker i närområdet." }
         ],
         transport: "Pågatåg/Öresundståg till Malmö C + Stadsbuss 2 eller 15 minuters promenad till Västra Hamnen."
-    },
-    "vasamuseet": {
-        namn: "Vasamuseet",
-        land: "Sverige, Stockholm",
-        varldsdel: "Europa",
-        bild: "vasa-museet.png",
-        kortBeskrivning: "Specialbyggt museum för regalskeppet Vasa som förliste på sin jungfrufärd 1628.",
-        fakta: [
-            { titel: "Förlisning", värde: "1628" },
-            { titel: "Bärgad", värde: "1961 (efter 333 år)" },
-            { titel: "Plats", värde: "Djurgården, Stockholm" },
-            { titel: "Budget", värde: "500–2 800 SEK / dag" }
-        ],
-        historia: "Regalskeppet Vasa sjönk i Stockholms hamn under sin jungfrufärd år 1628. Efter 333 år på havsbotten bärgades skeppet 1961 och är idag världens bäst bevarade 1600-talsskepp med över 98 % originaldelar.",
-        attraktioner: [
-            { titel: "Regalskeppet Vasa", beskrivning: "Det unikt bevarade fartyget med hundratals täljda originalskulpturer." },
-            { titel: "Utställningarna", beskrivning: "Skildringar av livet ombord, skeppsbygget, stormaktstiden och det tekniska bärgningsarbetet." },
-            { titel: "Djurgården", beskrivning: "Det gröna parkområdet runt museet med matställen som Rosendals Trädgård och Spritmuseum." }
-        ],
-        transport: "Spårvagn 7 från T-Centralen eller Djurgårdsfärjan från Slussen direkt till Djurgården."
     },
     "vatikanstaten": {
         namn: "Vatikanstaten",
@@ -1930,5 +1890,62 @@ const platserData = {
             { titel: "Röda dalen (Red Valley)", beskrivning: "Närliggande surrealistiskt landskap täckt av intensivt röd jord och klippor." }
         ],
         transport: "Dagsutflykt eller buss från Cusco till Pitumarca/Cusiapata (ca 3 timmar), följt av vandring eller ridning sista sträckan upp till passet."
+    },
+    "lotte-world-tower": {
+        namn: "Lotte World Tower",
+        land: "Sydkorea, Seoul",
+        varldsdel: "Asien",
+        bild: "lotte world tower.jpg",
+        kortBeskrivning: "Sydkoreas högsta skyskrapa med en svepande form inspirerad av traditionell koreansk keramik och kalligrafi.",
+        fakta: [
+            { titel: "Höjd", värde: "555,7 meter (123 våningar)" },
+            { titel: "Invigt", värde: "2017" },
+            { titel: "Särdrag", värde: "Sydkoreas högsta byggnad" }
+        ],
+        historia: "Lotte World Tower tog över 13 år att planera och färdigställdes 2017 som ett nytt arkitektoniskt landmärke för Seoul. Dess mjukt avsmalnande silhuett är designad med inspiration från traditionell koreansk keramik och kalligrafipenslar, och rymmer en hel vertikal stad med kontor, lyxhotell och bostäder.",
+        attraktioner: [
+            { titel: "Seoul Sky", beskrivning: "Utsiktsplatå på våning 117–123 med panoramavyer och ett svindlande glasgolv inomhus på 478 meters höjd." },
+            { titel: "Sky Shuttle", beskrivning: "Dubbeldäckade blixtsnabba hissar som tar besökare från markplan upp till observatoriet på bara 60 sekunder." },
+            { titel: "Lotte World Mall & Park", beskrivning: "Storslaget shopping- och nöjeskomplex vid foten av tornet intill Seokchon-sjöarna." }
+        ],
+        transport: "Seoul Subway (Linje 2 eller Linje 8) direkt till Jamsil Station med ingång under jord till tornet."
+    },
+    "positano": {
+        namn: "Positano",
+        land: "Italien, Amalfikusten",
+        varldsdel: "Europa",
+        bild: "positano.jpg",
+        kortBeskrivning: "Dramatisk och pittoresk kustby känd för sina pastellfärgade hus som klamrar sig fast vid berget.",
+        fakta: [
+            { titel: "Plats", värde: "Amalfikusten, Kampanien" },
+            { titel: "Känd för", värde: "Pastellfärgade hus & branta trappgränder" },
+            { titel: "Unesco-status", värde: "Världsarv (Amalfikusten) sedan 1997" }
+        ],
+        historia: "Positano var under medeltiden en viktig hamnstad i Amalfirepubliken. Efter en period av nedgång på 1800-talet förvandlades den fattiga fiskebyn under midmitten av 1900-talet till en exklusiv destination för konstnärer, författare och kändisar från hela världen.",
+        attraktioner: [
+            { titel: "Spiaggia Grande", beskrivning: "Den kända huvudstranden med färgstarka parasoll och panoramautsikt över staden på berget." },
+            { titel: "Chiesa di Santa Maria Assunta", beskrivning: "Ikonisk kyrka känd för sin färgglada majolikaklädda kupol och svarta madonnaikon." },
+            { titel: "Sentiero degli Dei (Gudarnas stig)", beskrivning: "Spektakulär vandringsled högt över havet som erbjuder en av världens mest berömda vyer." }
+        ],
+        transport: "Färja eller buss (SITA) från Sorrento, Salerno och Capri, eller taxi längs den slingrande kustvägen SS163."
+    },
+    "lutande-tornet-i-pisa": {
+        namn: "Lutande tornet i Pisa",
+        land: "Italien, Pisa",
+        varldsdel: "Europa",
+        bild: "pisa.jpg",
+        kortBeskrivning: "Världsberömt fristående klocktorn känt för sin obalanserade och dramatiska lutning.",
+        fakta: [
+            { titel: "Byggstart", värde: "1173" },
+            { titel: "Höjd", värde: "55,86 m (låga sidan) / 56,67 m (höga sidan)" },
+            { titel: "Unesco-status", värde: "Världsarv (Piazza del Duomo) sedan 1987" }
+        ],
+        historia: "Tornet började byggas som klocktorn till stadens katedral 1173. Redan under uppförandet av den tredje våningen började marken under tornet ge vika på grund av den mjuka lergrunden. Efter omfattande stabiliseringsarbeten kring sekelskiftet 2000 har tornet säkrats för framtiden.",
+        attraktioner: [
+            { titel: "Utsiktsplattformen", beskrivning: "Klättra uppför de 251 lutande marmortrappstegen till tornets klockor för en fantastisk vy." },
+            { titel: "Katedralen i Pisa (Duomo di Pisa)", beskrivning: "Storslagen romansk domkyrka i vit marmor belägen alldeles intill tornet." },
+            { titel: "Battistero di San Giovanni", beskrivning: "Italiens största dopkapell känt för sin fantastiska akustik och marmorarkitektur." }
+        ],
+        transport: "Tåg till stationen Pisa Centrale eller Pisa San Rossore, därefter en kort promenad eller lokalbuss till Piazza dei Miracoli."
     }
 };

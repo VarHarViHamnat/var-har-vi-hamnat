@@ -382,26 +382,6 @@ const platserData = {
         ],
         transport: "Tåg från München Hbf till Füssen (ca 2 timmar) + lokalbuss 73/78 till Hohenschwangau."
     },
-    "nuuk": {
-        namn: "Nuuk",
-        land: "Grönland",
-        varldsdel: "Nordamerika",
-        bild: "grönland huvudstad.png",
-        kortBeskrivning: "Grönlands färgstarka huvudstad omgiven av storslagna fjäll, isberg och arktiska fjordar.",
-        fakta: [
-            { titel: "Grundat", värde: "1728" },
-            { titel: "Invånare", värde: "Ca 19 000" },
-            { titel: "Särdrag", värde: "Världsnordligaste huvudstad" },
-            { titel: "Budget", värde: "1 100–4 500 SEK / dag" }
-        ],
-        historia: "Nuuk grundades av den dansk-norska missionären Hans Egede under namnet Godthåb. Staden kombinerar tusenårig inuitisk kultur med modern arktisk arkitektur och ligger vid mynningen av Nuup Kangerlua-fjorden.",
-        attraktioner: [
-            { titel: "Gamla hamnen (Kolonihavnen)", beskrivning: "Färgstarka trähus, Hans Egedes hus och den historiska kyrkan." },
-            { titel: "Grönlands Nationalmuseum", beskrivning: "Känt för de 500 år gamla och välbevarade Qilakitsoq-mumierna." },
-            { titel: "Katuaq Kulturhus", beskrivning: "Arkitektoniskt prisbelönt kulturhus inspirerat av norrskenet." }
-        ],
-        transport: "Flyg med Air Greenland via Köpenhamn eller Kangerlussuaq till Nuuks flygplats."
-    },
     "penapalatsen": {
         namn: "Pena-palatset (Sintra)",
         land: "Portugal, Sintra",
@@ -981,25 +961,6 @@ const platserData = {
             { titel: "Happily Ever After", beskrivning: "Storslaget kvällsfyrverkeri med projektioner och musik över slottet." }
         ],
         transport: "Flyg till Orlando International Airport (MCO) och därefter busstransfer, taxi eller hyrbil till resorten."
-    },
-    "glaciaren-patagonien": {
-        namn: "Patagoniens glaciärer (Torres del Paine / Grey)",
-        land: "Chile & Argentina",
-        varldsdel: "Sydamerika",
-        bild: "glaciären patagonien.png",
-        kortBeskrivning: "Mäktiga azurblå isformationer och dramatiska bergstoppar i södra Patagonien.",
-        fakta: [
-            { titel: "Region", värde: "Patagonien (Chile / Argentina)" },
-            { titel: "Kända glaciärer", värde: "Glaciären Grey & Perito Moreno" },
-            { titel: "Särdrag", värde: "Enorm issköljd söder om Antarktis" }
-        ],
-        historia: "Södra Patagoniens isfält är en av världens största färskvattenreserver utanför polartrakterna. Områdets glaciärer och vassa bergsryggar har skulpterats under tusentals år av istider.",
-        attraktioner: [
-            { titel: "Glaciären Grey", beskrivning: "Imponerande blå isvägg belägen i nationalparken Torres del Paine." },
-            { titel: "Båttur på Lago Grey", beskrivning: "Navigera bland flytande isberg fram till glaciärkanten." },
-            { titel: "Is-vandring", beskrivning: "Guidad vandring med stegjärn direkt på glaciärens sprakande is." }
-        ],
-        transport: "Flyg till Punta Arenas eller Puerto Natales i Chile, därefter buss eller hyrbil till nationalparken."
     },
     "salar-de-uyuni": {
         namn: "Salar de Uyuni",
@@ -1931,5 +1892,43 @@ const platserData = {
             { titel: "Kaninlandet", beskrivning: "Stort färgglatt område anpassat för de yngre besökarna med tivolilekar och karuseller." }
         ],
         transport: "Spårvagn (linje 2, 4, 5 m.fl.) direkt till hållplatsen Liseberg eller Korsvägen från Göteborgs Centralstation."
+    },
+    "navagio-beach": {
+        namn: "Navagio Beach (Shipwreck Beach)",
+        land: "Grekland, Zakynthos",
+        varldsdel: "Europa",
+        bild: "shipwrek zakyntos.jpg",
+        kortBeskrivning: "Ikonisk strand inramad av höga kalkstensklippor, turkost vatten och ett rostande skeppsvrak.",
+        fakta: [
+            { titel: "Plats", värde: "Zakynthos, Grekland" },
+            { titel: "Vraket", värde: "MV Panagiotis (gick på grund 1980)" },
+            { titel: "Särdrag", värde: "Nås endast via havet" }
+        ],
+        historia: "Navagio Beach blev världskänd 1980 när fraktfartyget MV Panagiotis gick på grund på den isolerade sandstranden under en storm. Vraket lämnades kvar på stranden och har tillsammans med de stupande vita kalkstensklipporna blivit ett av Greklands mest fotograferade landmärken.",
+        attraktioner: [
+            { titel: "Skeppsvraket MV Panagiotis", beskrivning: "Det rostande vraket som ligger inbäddat i den vita klapperstensstranden." },
+            { titel: "Utsiktsplatsen på klippan", beskrivning: "Panoramaplattform högt ovanför stranden med svindlande utsikt över hela bukten." },
+            { titel: "Blå grottorna (Blue Caves)", beskrivning: "Närliggande havsgrottor kända för sitt intensivt bländande turkosa vatten." }
+        ],
+        transport: "Utflyktsbåt från Porto Vromi, Agios Nikolaos eller Zakynthos stad; utsiktsplatsen nås med bil/taxi från bergsbyarna Volimes och Anafonitria."
+    },
+    "rainbow-mountain": {
+        namn: "Rainbow Mountain (Vinicunca)",
+        land: "Peru, Cusco",
+        varldsdel: "Sydamerika",
+        bild: "rainbow moutain.jpg",
+        kortBeskrivning: "Magiskt regnbågsfärgat berg i Andesbergen format av unika mineralavlagringar.",
+        fakta: [
+            { titel: "Höjd", värde: "5 200 m ö.h." },
+            { titel: "Plats", värde: "Cusco-regionen, Peru" },
+            { titel: "Särdrag", värde: "Färgstarka ränder skapade av mineraler och vittring" }
+        ],
+        historia: "Vinicunca, eller Montaña de Siete Colores, låg länge täckt under snö och is. I takt med att glaciärerna smälte upptäcktes de fantastiska mineralränderna i rött, gult, grönt och lila, vilket snabbt gjorde berget till en av Perus mest ikoniska natursevärdheter efter Machu Picchu.",
+        attraktioner: [
+            { titel: "Utsiktsplatån Vinicunca", beskrivning: "Utkiksplats på över 5 000 meters höjd med utsikt över bergets färgstarka ränder." },
+            { titel: "Ausangate-massivet", beskrivning: "Storslagen vy över det heliga snöklädda berget Ausangate i bakgrunden." },
+            { titel: "Röda dalen (Red Valley)", beskrivning: "Närliggande surrealistiskt landskap täckt av intensivt röd jord och klippor." }
+        ],
+        transport: "Dagsutflykt eller buss från Cusco till Pitumarca/Cusiapata (ca 3 timmar), följt av vandring eller ridning sista sträckan upp till passet."
     }
 };

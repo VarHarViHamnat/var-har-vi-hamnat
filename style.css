@@ -460,3 +460,48 @@ body.destinations-page .bento-card:hover {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
+/* ==========================================
+   FIX: TOPPRUTA VÅGRÄTT LÄNGST UPP (OM FÖRETAGET & KLIMAT)
+   ========================================== */
+
+body.about-page .page-container,
+body.climate-page .page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Topprutan på "Om företaget" */
+body.about-page .page-container > .bento-top {
+    width: 100%;
+    flex: none;
+    margin-bottom: 0;
+}
+
+/* De två spalterna under topprutan på "Om företaget" */
+body.about-page .page-container > .bento-columns {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+/* Hero-kortet högst upp på "Klimat & FN-mål" */
+body.climate-page .page-container > .klimat-hero-card {
+    width: 100%;
+    flex: none;
+    margin-bottom: 0;
+}
+
+/* Rutnätet med de fyra korten under hero-kortet på "Klimat & FN-mål" */
+body.climate-page .page-container > .bento-grid {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    body.about-page .page-container > .bento-columns {
+        flex-direction: column;
+    }
+}

@@ -29,20 +29,20 @@
         <section class="product-detail-card">
             
             <!-- Bild & Snabbfakta på produkten -->
-<div class="product-detail-media">
-    <img src="produkt.jpg" alt="Produktbild" class="detail-img">
-    
-    <!-- Kort information/snabbfakta under bilden -->
-    <div class="product-quick-specs">
-        <h3>Snabbfakta</h3>
-        <ul>
-            <li><strong>Mått/Storlek:</strong> 20 x 15 cm</li>
-            <li><strong>Material:</strong> Högkvalitativ trä / plast</li>
-            <li><strong>Speltid / Ålder:</strong> 15–30 min | 8+ år</li>
-            <li><strong>Leverans:</strong> Skickas inom 1–3 dagar</li>
-        </ul>
-    </div>
-</div>
+            <div class="product-detail-media">
+                <img src="produkt.jpg" alt="Produktbild" class="detail-img">
+                
+                <!-- Kort information/snabbfakta under bilden -->
+                <div class="product-quick-specs">
+                    <h3>Snabbfakta</h3>
+                    <ul>
+                        <li><strong>Mått/Storlek:</strong> 92 x 140 cm</li>
+                        <li><strong>Material:</strong> slitstarkt spelkortsmaterial med en skyddande ytbehandling </li>
+                        <li><strong>Speltid / Ålder:</strong> 45 min-1 timme | 10+ år</li>
+                        <li><strong>Leverans:</strong> Skickas inom 1–3 dagar</li>
+                    </ul>
+                </div>
+            </div>
 
             <!-- Produktdetaljer och Köp-sektion -->
             <div class="product-detail-info">
@@ -51,9 +51,21 @@
                 
                 <hr class="divider">
 
-                <p class="detail-text">
-                    Här skriver ni en fylligare beskrivning av er produkt. Vad gör den speciell? Vad ingår? Vilka material eller egenskaper har den?
-                </p>
+                <!-- Utfällbar produktbeskrivning -->
+                <details class="product-accordion">
+                    <summary class="accordion-btn">
+                        <span>Läs mer om produkten</span>
+                        <span class="accordion-arrow" aria-hidden="true">▼</span>
+                    </summary>
+                    <div class="accordion-panel">
+                        <div class="accordion-content">
+                            <p>Var har vi hamnat? är ett geografiskt kortspel där spelarna ska lista ut vilket land en bild föreställer genom att analysera visuella ledtrådar och använda sina geografiska kunskaper. Spelet kombinerar kunskap, problemlösning och tävling på ett roligt och socialt sätt.
+Spelet innehåller 100 dubbelsidiga kort med bilder på framsidan och ledtrådar på baksidan, en digital regelbok och en förpackning. Korten är tillverkade av slitstarkt spelkortsmaterial med en skyddande ytbehandling. Spelet är anpassat för minst 2 lag, rekommenderas från 10 år och tar cirka 45 min – 1 timme att spela.
+Det som gör spelet speciellt är att varje kort även innehåller en QR-kod som leder till vår hemsida, där spelarna kan läsa mer om platsen, dess kultur och sevärdheter. Hemsidan erbjuder även alternativa spelsätt för den som vill ha mer variation. QR-koderna och hemsidan är frivilliga tillägg, vilket innebär att grundspelet kan spelas helt utan mobiltelefon eller internet.
+</p>
+                        </div>
+                    </div>
+                </details>
 
                 <!-- Köpknapp / Betallänk -->
                 <div class="buy-box">
@@ -63,7 +75,8 @@
 
         </section>
     </main>
-<!-- Koppla in skriptet för scroll-magin -->
+
+    <!-- Koppla in skriptet för scroll-magin -->
     <script src="script.js"></script>
 </body>
 </html>

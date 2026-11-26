@@ -46,3 +46,33 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
+document.querySelectorAll('.product-accordion').forEach((details) => {
+    const summary = details.querySelector('summary');
+    if (!summary) return;
+
+    if (details.open) {
+        details.classList.add('is-open');
+    }
+
+    summary.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const isOpen = details.classList.contains('is-open');
+        const panel = details.querySelector('.accordion-panel');
+
+        if (!isOpen) {
+            details.setAttribute('open', '');
+            requestAnimationFrame(() => {
+                details.classList.add('is-open');
+            });
+        } else {
+            details.classList.remove('is-open');
+            panel.addEventListener('transitionend', function handleEnd(e) {
+                if (e.propertyName === 'grid-template-rows' && !details.classList.contains('is-open')) {
+                    details.removeAttribute('open');
+                }
+                panel.removeEventListener('transitionend', handleEnd);
+            });
+        }
+    });
+});

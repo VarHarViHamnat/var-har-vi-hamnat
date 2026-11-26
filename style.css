@@ -653,3 +653,35 @@ body {
     line-height: 1.6;
     margin: 0;
 }
+/* ==========================================
+   TVINGA TVÅ KOLUMNER (BILD TILL HÖGER)
+   ========================================== */
+.product-detail-card.product-split-layout {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 32px !important;
+}
+
+.product-detail-card.product-split-layout .product-detail-info {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+}
+
+.product-detail-card.product-split-layout .product-detail-media {
+    flex: 0 0 340px !important;
+    width: 340px !important;
+    max-width: 45% !important;
+    margin-top: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.product-detail-card.product-split-layout .detail-img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 14px !important;
+    display: block !important;
+}
